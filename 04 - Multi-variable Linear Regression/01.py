@@ -21,7 +21,7 @@ init = tf.global_variables_initializer()
 sess = tf.Session()
 sess.run(init)
 
-for step in xrange(2001):
+for step in range(101):
     sess.run(train)
     if step % 20 == 0:
-        print step, sess.run(cost), sess.run(W1), sess.run(W2), sess.run(b)
+        print(step, sess.run(cost), sess.run(W1), sess.run(W2), sess.run(b))
